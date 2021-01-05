@@ -5,10 +5,10 @@ from tqdm import tqdm
 import numpy as np
 import tensorflow as tf
 
-from .setting import *
-from .tnet import *
-from .ops import *
-from .utils.calc_hammingranking import calc_map
+from setting import *
+from tnet import *
+from ops import *
+from utils.calc_hammingranking import calc_map
 
 class SSAH(object):
     def __init__(self, sess):

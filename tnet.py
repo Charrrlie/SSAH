@@ -1,8 +1,8 @@
 import scipy.misc
 import scipy.io
 
-from .ops import *
-from .setting import *
+from ops import *
+from setting import *
 
 def img_net(inputs, bit, numclass):
     data = scipy.io.loadmat(MODEL_DIR)

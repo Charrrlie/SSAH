@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
-from .setting import *
+from setting import *
 
 
 def conv_layer(input, weights, bias, pad, stride, i, net):
