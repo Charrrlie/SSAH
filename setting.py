@@ -9,9 +9,23 @@ from .load_data import split_data
 select_gpu = '0'
 per_process_gpu_memory_fraction = 1
 
-# Initialize data loader
-MODEL_DIR = './data/imagenet-vgg-f.mat'
-DATA_DIR = './data/Ssense/'
+MODEL_DIR = '/home/ubuntu/chan/SHDCH-pytorch/DataSet/imagenet-vgg-f.mat'
+
+DATA_DIR = '/home/ubuntu/chan/SHDCH-pytorch/DataSet/FashionVC/'
+TRAINING_SIZE = 16862
+QUERY_SIZE = 3000
+DATABASE_SIZE = 16862
+num_class1 = 8
+num_class2 = 27
+num_class = num_class1 + num_class2
+
+# DATA_DIR = '/home/ubuntu/chan/SHDCH-pytorch/DataSet/Ssense/'
+# TRAINING_SIZE = 13696
+# query_size = 2000
+# DATABASE_SIZE = 13696
+# num_class1 = 4
+# num_class2 = 28
+# num_class = num_class1 + num_class2
 
 phase = 'train'
 checkpoint_dir = './checkpoint'
@@ -29,9 +43,6 @@ images, tags, labels = loading_data(DATA_DIR)
 dimTxt = tags.shape[1]
 dimLab = labels.shape[1]
 
-DATABASE_SIZE = 13696
-TRAINING_SIZE = 13696
-QUERY_SIZE = 2000
 VERIFICATION_SIZE = 1000
 
 X, Y, L = split_data(images, tags, labels, QUERY_SIZE, TRAINING_SIZE, DATABASE_SIZE)
@@ -63,7 +74,8 @@ k_txt_net = 15
 k_dis_net = 1
 save_freq = 1
 
-bit = 16
+bit = 16    # bit
+
 alpha = 1
 gamma = 1
 beta = 1
