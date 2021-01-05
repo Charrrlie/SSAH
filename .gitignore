@@ -1,0 +1,6 @@
+
+.DS_Store
+data/imagenet-vgg-f.mat
+data/Ssense/image.mat
+data/Ssense/label.mat
+data/Ssense/tag.mat
