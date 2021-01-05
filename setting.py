@@ -1,8 +1,8 @@
 import numpy as np
 import scipy.io
 
-from .load_data import loading_data
-from .load_data import split_data
+from load_data import loading_data
+from load_data import split_data
 
 
 # environmental setting: setting the following parameters based on your experimental environment.

@@ -2,8 +2,8 @@ import os
 
 import tensorflow as tf
 
-from .setting import *
-from .SSAH import SSAH
+from setting import *
+from SSAH import SSAH
 
 os.environ['CUDA_VISIBLE_DEVICES'] = select_gpu
 gpuconfig = tf.ConfigProto(gpu_options=tf.GPUOptions(per_process_gpu_memory_fraction=per_process_gpu_memory_fraction))
